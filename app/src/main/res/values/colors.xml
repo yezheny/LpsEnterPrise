@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#4e8efc</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray0">#f2f2f2</color>
+    <color name="gray1">#dfdede</color>
+    <color name="gray2">#cbc8c8</color>
+    <color name="black">#000000</color>
+    <color name="loading_color">#9A9A9A</color>
+    <!--登录账号密码背景-->
+    <color name="login_account_psw_edit_bg">#f3f5f6</color>
+    <color name="login_account_psw_edit_hint_color">#ababab</color>
+    <color name="login_account_psw_edit_input_color">#080808</color>
+    <color name="app_all_tv_black_color">#333333</color>
+    <color name="login_btn_nopress_color">#4e8efc</color>
+    <color name="login_btn_press_color">#3e84fe</color>
+</resources>
