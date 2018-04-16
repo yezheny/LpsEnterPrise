@@ -68,4 +68,22 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/app_all_tv_black_color</item>
     </style>
+    <!--统一left_textview的style-->
+    <style name="left_tv_style_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:textColor">@color/app_all_tv_black_color</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:drawablePadding">@dimen/dp_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/dp_15</item>
+    </style>
+    <!--统一main_toolbar_title_textview的style-->
+    <style name="main_toolbar_title_tvstyle_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_all_tv_black_color</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>

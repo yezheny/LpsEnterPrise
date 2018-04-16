@@ -8,6 +8,8 @@ import android.os.Build;
 import android.support.multidex.MultiDex;
 import android.widget.Toast;
 
+import com.baidu.mapapi.CoordType;
+import com.baidu.mapapi.SDKInitializer;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.Utils;
 import com.orhanobut.logger.AndroidLogAdapter;
@@ -63,8 +65,18 @@ public class App extends DefaultApplicationLike {
         RetrofitHelper.getInstance().init();
         //初始化Realm数据库
         RealmHelp.getInstance().init(mContext);
+        //百度地图初始化
+        initBaiDuMap();
         //换肤初始化
 //        initSkin();
+    }
+
+    private void initBaiDuMap() {
+        // 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
+        SDKInitializer.initialize(mContext);
+        //自4.3.0起，百度地图SDK所有接口均支持百度坐标和国测局坐标，用此方法设置您使用的坐标类型.
+        //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
+        SDKInitializer.setCoordType(CoordType.BD09LL);
     }
 
 //    private void initSkin() {

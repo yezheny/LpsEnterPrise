@@ -10,26 +10,44 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.gyf.barlibrary.ImmersionBar;
 import com.orhanobut.logger.Logger;
 import com.yxcl.lpsenterprise.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    @Bind(R.id.toolbar)
+    Toolbar main_toolbar;
+    @Bind(R.id.drawer_layout)
+    DrawerLayout main_drawer_layout;
+    @Bind(R.id.nav_view)
+    NavigationView main_nav_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        ButterKnife.bind(this);
+        statusBarMethod();
+        initToolBarDrawable();
+    }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
+    //沉浸式
+    private void statusBarMethod() {
+        ImmersionBar.with(this).statusBarDarkFont(true, 0.2f).init();
+    }
+
+    private void initToolBarDrawable() {
+        setSupportActionBar(main_toolbar);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, main_drawer_layout, main_toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        main_drawer_layout.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setItemIconTintList(null);
+        main_nav_view.setNavigationItemSelectedListener(this);
+        main_nav_view.setItemIconTintList(null);
     }
 
     //返回键退出

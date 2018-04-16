@@ -9,6 +9,7 @@
     tools:context="com.yxcl.lpsenterprise.view.activity.main.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+
     <com.yxcl.lpsenterprise.utils.customview.NoScrollViewPager
         android:id="@+id/main_viewpager"
         android:layout_width="match_parent"

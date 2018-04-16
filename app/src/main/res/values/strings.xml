@@ -15,10 +15,14 @@
     <string name="life_empty">空的空的......</string>
     <string name="zwwl">加载失败，请点击重新加载</string>
     <string name="again_reload">重新加载</string>
-    <string name="out_login_str">退出登录</string>
+    <string name="out_login_str">退出</string>
     <string name="left_account_name_str">String_Name</string>
     <string name="qita_str">其它</string>
     <string name="left_change_psw_str">修改密码</string>
     <string name="left_feedback_str">意见反馈</string>
-    <string name="about_str">关于</string>
+    <string name="about_str">关于我们</string>
+    <string name="main_toolbar_jk_str">监控</string>
+    <string name="main_toolbar_gj_str">轨迹</string>
+    <string name="main_toolbar_sp_str">视频</string>
+    <string name="fg_monitor_search_str">输入车牌号搜索</string>
 </resources>

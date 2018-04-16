@@ -17,8 +17,8 @@ import com.yxcl.lpsenterprise.presenter.IFgMonitorPresenter;
  * Time 2018/4/13 13:37
  */
 
-public class FgMonitor extends BaseFragment<FgMonitorPresenter> implements IFgMonitorPresenter {
-    View FgView;
+public class FgTrajectory extends BaseFragment<FgMonitorPresenter> implements IFgMonitorPresenter {
+    View FgTrajectoryView;
     private MapView mMapView;
 
     @Override
@@ -28,13 +28,13 @@ public class FgMonitor extends BaseFragment<FgMonitorPresenter> implements IFgMo
 
     @Override
     protected View getContentView(LayoutInflater inflater, @Nullable Bundle savedInstanceState) {
-        FgView = inflater.inflate(R.layout.fg_monitor_layout, null);
+        FgTrajectoryView = inflater.inflate(R.layout.fg_trajectory_layout, null);
         initViewFgMonitor();
-        return FgView;
+        return FgTrajectoryView;
     }
 
     private void initViewFgMonitor() {
-        mMapView = (MapView) FgView.findViewById(R.id.fg_monitor_mapview);
+        mMapView = (MapView) FgTrajectoryView.findViewById(R.id.fg_trajectory_mapview);
     }
 
     @Override

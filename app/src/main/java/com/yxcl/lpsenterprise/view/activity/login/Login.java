@@ -12,7 +12,7 @@ import com.yxcl.lpsenterprise.base.BaseActivity;
 import com.yxcl.lpsenterprise.presenter.ILoginPresenter;
 import com.yxcl.lpsenterprise.presenter.LoginPresenter;
 import com.yxcl.lpsenterprise.utils.Util;
-import com.yxcl.lpsenterprise.view.activity.main.MainActivity;
+import com.yxcl.lpsenterprise.view.activity.main.RadioMainActivity;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -76,7 +76,7 @@ public class Login extends BaseActivity<LoginPresenter> implements ILoginPresent
 
                 break;
             case R.id.login_btn:
-                Util.NextActivity(this, MainActivity.class);
+                Util.NextActivity(this, RadioMainActivity.class);
                 break;
         }
     }
