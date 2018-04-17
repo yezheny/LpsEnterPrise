@@ -34,7 +34,7 @@ public class FgVideo extends BaseFragment<FgVideoPresenter> implements IFgVideoP
 
     @Override
     protected void ChildRequestServiceData() {
-
+        refresh_success_gone();
     }
 
     @Override

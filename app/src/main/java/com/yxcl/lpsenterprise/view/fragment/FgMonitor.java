@@ -63,6 +63,7 @@ public class FgMonitor extends BaseFragment<FgMonitorPresenter> implements IFgMo
 
     @Override
     protected void ChildRequestServiceData() {
+        refresh_success_gone();
         mPresenter.getAllCarsData(App.getSp().getString("user_id"), CarType);
     }
 

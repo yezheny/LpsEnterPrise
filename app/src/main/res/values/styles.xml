@@ -87,6 +87,7 @@
         <item name="android:drawablePadding">@dimen/dp_10</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_marginTop">@dimen/dp_15</item>
+        <item name="android:background">@drawable/white_bg_press_gray0</item>
     </style>
     <!--统一main_toolbar_title_textview的style-->
     <style name="main_toolbar_title_tvstyle_textview">
