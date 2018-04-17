@@ -17,4 +17,5 @@
     <color name="app_all_tv_black_color">#333333</color>
     <color name="login_btn_nopress_color">#4e8efc</color>
     <color name="login_btn_press_color">#3e84fe</color>
+    <color name="all_layout_bg_color">#f5f8fa</color>
 </resources>

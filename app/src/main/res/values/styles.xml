@@ -43,6 +43,16 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
+    <!--New登录页面start-->
+    <style name="new_login_linearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/new_login_linearlayout_bg</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
     <style name="login_imageview">
         <item name="android:layout_width">35dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -86,4 +96,19 @@
         <item name="android:textSize">@dimen/sp_15</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
+    <!--统一line_view_bg_gray0的style-->
+    <style name="line_gray0_m_width_h05_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_05</item>
+        <item name="android:background">@color/gray0</item>
+    </style>
+
+    <!--统一line_view_bg_gray1的style-->
+    <style name="line_gray1_m_width_h05_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_05</item>
+        <item name="android:background">@color/gray1</item>
+    </style>
+
 </resources>
