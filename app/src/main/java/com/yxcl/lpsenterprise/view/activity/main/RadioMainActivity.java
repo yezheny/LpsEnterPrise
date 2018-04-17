@@ -14,10 +14,16 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.orhanobut.logger.Logger;
 import com.yxcl.lpsenterprise.R;
+import com.yxcl.lpsenterprise.utils.Util;
+import com.yxcl.lpsenterprise.view.activity.left.AboutMes;
+import com.yxcl.lpsenterprise.view.activity.left.ChangePsw;
+import com.yxcl.lpsenterprise.view.activity.left.FeedBack;
+import com.yxcl.lpsenterprise.view.activity.msg.MessageCenter;
 import com.yxcl.lpsenterprise.view.fragment.FgMonitor;
 import com.yxcl.lpsenterprise.view.fragment.FgTrajectory;
 import com.yxcl.lpsenterprise.view.fragment.FgVideo;
@@ -42,6 +48,14 @@ public class RadioMainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     @Bind(R.id.radio_main_content_fly)
     FrameLayout radio_main_content_fly;
+    @Bind(R.id.left_changepsw_tv)
+    TextView leftChangepswTv;
+    @Bind(R.id.left_feedback_tv)
+    TextView leftFeedbackTv;
+    @Bind(R.id.left_about_mes_tv)
+    TextView leftAboutMesTv;
+    @Bind(R.id.left_out_login_tv)
+    TextView leftOutLoginTv;
 
     private FgMonitor mFgMonitor;
     private FgTrajectory mFgTrajectory;
@@ -153,12 +167,15 @@ public class RadioMainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             //消息
             Logger.e("消息");
+            Util.NextActivity(this, MessageCenter.class);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    @OnClick({R.id.monitor_radiobtn, R.id.trajectory_radiobtn, R.id.video_radiobtn})
+    @OnClick({R.id.monitor_radiobtn, R.id.trajectory_radiobtn, R.id.video_radiobtn
+            , R.id.left_changepsw_tv, R.id.left_feedback_tv
+            , R.id.left_about_mes_tv, R.id.left_out_login_tv})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.monitor_radiobtn:
@@ -169,6 +186,22 @@ public class RadioMainActivity extends AppCompatActivity {
                 break;
             case R.id.video_radiobtn:
                 select(3);
+                break;
+            case R.id.left_changepsw_tv:
+                //改变密码
+                Util.NextActivity(this, ChangePsw.class);
+                break;
+            case R.id.left_feedback_tv:
+                //反馈意见
+                Util.NextActivity(this, FeedBack.class);
+                break;
+            case R.id.left_about_mes_tv:
+                //关于我们
+                Util.NextActivity(this, AboutMes.class);
+                break;
+            case R.id.left_out_login_tv:
+                //退出登录
+
                 break;
         }
     }

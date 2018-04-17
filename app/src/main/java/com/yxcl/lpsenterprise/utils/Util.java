@@ -118,7 +118,7 @@ public class Util {
 
     //获取网络加载
     public static void setShowLoading(Context context) {
-        mLoadingDialog = LoadingDialog.show(context, "加载中....");
+        mLoadingDialog = LoadingDialog.showLoading(context, "加载中....");
     }
 
     public static void setOnCancelLinstener() {

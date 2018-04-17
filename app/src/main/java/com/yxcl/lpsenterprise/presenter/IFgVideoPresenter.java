@@ -1,6 +1,6 @@
 package com.yxcl.lpsenterprise.presenter;
 
-import com.yxcl.lpsenterprise.model.MonitorAllCarsBean;
+import com.yxcl.lpsenterprise.model.VideoBean;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
  * Time 2018/4/13 13:38
  */
 
-public interface IFgMonitorPresenter {
+public interface IFgVideoPresenter {
 
-    void getAllCarsData(List<MonitorAllCarsBean> mList);
+    void getVideoData(List<VideoBean> mList);
 
     void error();
 }

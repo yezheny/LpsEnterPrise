@@ -1,6 +1,6 @@
 package com.yxcl.lpsenterprise.presenter;
 
-import com.yxcl.lpsenterprise.model.MonitorAllCarsBean;
+import com.yxcl.lpsenterprise.model.TrajectoryBean;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
  * Time 2018/4/13 13:38
  */
 
-public interface IFgMonitorPresenter {
+public interface IFgTrajectoryPresenter {
 
-    void getAllCarsData(List<MonitorAllCarsBean> mList);
+    void getData(List<TrajectoryBean> mList);
 
     void error();
 }

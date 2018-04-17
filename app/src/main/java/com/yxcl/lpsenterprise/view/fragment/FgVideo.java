@@ -7,19 +7,24 @@ import android.view.View;
 
 import com.yxcl.lpsenterprise.R;
 import com.yxcl.lpsenterprise.base.BaseFragment;
-import com.yxcl.lpsenterprise.presenter.FgMonitorPresenter;
-import com.yxcl.lpsenterprise.presenter.IFgMonitorPresenter;
+import com.yxcl.lpsenterprise.model.VideoBean;
+import com.yxcl.lpsenterprise.presenter.FgVideoPresenter;
+import com.yxcl.lpsenterprise.presenter.IFgVideoPresenter;
+
+import java.util.List;
 
 /**
- * class from
+ * class from 视频
  * Created by zqf
  * Time 2018/4/13 13:37
  */
 
-public class FgVideo extends BaseFragment<FgMonitorPresenter> implements IFgMonitorPresenter {
+public class FgVideo extends BaseFragment<FgVideoPresenter> implements IFgVideoPresenter {
+
+
     @Override
-    protected FgMonitorPresenter createPresenter() {
-        return new FgMonitorPresenter(this);
+    protected FgVideoPresenter createPresenter() {
+        return new FgVideoPresenter(this);
     }
 
     @Override
@@ -29,6 +34,16 @@ public class FgVideo extends BaseFragment<FgMonitorPresenter> implements IFgMoni
 
     @Override
     protected void ChildRequestServiceData() {
+
+    }
+
+    @Override
+    public void getVideoData(List<VideoBean> mList) {
+
+    }
+
+    @Override
+    public void error() {
 
     }
 }

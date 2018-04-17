@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <View style="@style/line_gray1_m_width_h05_style" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_layout_bg_color">
+
+        <LinearLayout
+            android:id="@+id/message_center_bottom_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/white_bg_press_gray0"
+                android:gravity="center"
+                android:text="@string/all_choose_str"
+                android:textColor="@color/app_all_tv_black_color" />
+
+            <TextView
+                android:layout_width="@dimen/dp_05"
+                android:layout_height="match_parent"
+                android:background="@color/gray1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/white_bg_press_gray0"
+                android:gravity="center"
+                android:text="@string/single_choose_str"
+                android:textColor="@color/app_all_tv_black_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/message_center_bottom_linear"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/message_center_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/white" />
+
+            <com.yxcl.lpsenterprise.utils.customview.NoScrollViewPager
+                android:id="@+id/message_center_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

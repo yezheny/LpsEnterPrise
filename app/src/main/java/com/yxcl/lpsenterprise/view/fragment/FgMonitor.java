@@ -7,9 +7,13 @@ import android.view.View;
 
 import com.baidu.mapapi.map.MapView;
 import com.yxcl.lpsenterprise.R;
+import com.yxcl.lpsenterprise.app.App;
 import com.yxcl.lpsenterprise.base.BaseFragment;
+import com.yxcl.lpsenterprise.model.MonitorAllCarsBean;
 import com.yxcl.lpsenterprise.presenter.FgMonitorPresenter;
 import com.yxcl.lpsenterprise.presenter.IFgMonitorPresenter;
+
+import java.util.List;
 
 /**
  * class from
@@ -20,6 +24,7 @@ import com.yxcl.lpsenterprise.presenter.IFgMonitorPresenter;
 public class FgMonitor extends BaseFragment<FgMonitorPresenter> implements IFgMonitorPresenter {
     View FgView;
     private MapView mMapView;
+    private String CarType = "";//默认所有
 
     @Override
     protected FgMonitorPresenter createPresenter() {
@@ -29,12 +34,13 @@ public class FgMonitor extends BaseFragment<FgMonitorPresenter> implements IFgMo
     @Override
     protected View getContentView(LayoutInflater inflater, @Nullable Bundle savedInstanceState) {
         FgView = inflater.inflate(R.layout.fg_monitor_layout, null);
-        initViewFgMonitor();
+        initViewBaiduFgMonitor();
         return FgView;
     }
 
-    private void initViewFgMonitor() {
+    private void initViewBaiduFgMonitor() {
         mMapView = (MapView) FgView.findViewById(R.id.fg_monitor_mapview);
+        mMapView.showZoomControls(false);//是否显示缩放控件
     }
 
     @Override
@@ -57,6 +63,16 @@ public class FgMonitor extends BaseFragment<FgMonitorPresenter> implements IFgMo
 
     @Override
     protected void ChildRequestServiceData() {
+        mPresenter.getAllCarsData(App.getSp().getString("user_id"), CarType);
+    }
+
+    @Override
+    public void getAllCarsData(List<MonitorAllCarsBean> mList) {
         refresh_success_gone();
+    }
+
+    @Override
+    public void error() {
+
     }
 }

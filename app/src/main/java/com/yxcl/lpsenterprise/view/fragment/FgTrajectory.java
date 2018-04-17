@@ -8,22 +8,25 @@ import android.view.View;
 import com.baidu.mapapi.map.MapView;
 import com.yxcl.lpsenterprise.R;
 import com.yxcl.lpsenterprise.base.BaseFragment;
-import com.yxcl.lpsenterprise.presenter.FgMonitorPresenter;
-import com.yxcl.lpsenterprise.presenter.IFgMonitorPresenter;
+import com.yxcl.lpsenterprise.model.TrajectoryBean;
+import com.yxcl.lpsenterprise.presenter.FgTrajectoryPresenter;
+import com.yxcl.lpsenterprise.presenter.IFgTrajectoryPresenter;
+
+import java.util.List;
 
 /**
- * class from
+ * class from 轨迹
  * Created by zqf
  * Time 2018/4/13 13:37
  */
 
-public class FgTrajectory extends BaseFragment<FgMonitorPresenter> implements IFgMonitorPresenter {
+public class FgTrajectory extends BaseFragment<FgTrajectoryPresenter> implements IFgTrajectoryPresenter {
     View FgTrajectoryView;
     private MapView mMapView;
 
     @Override
-    protected FgMonitorPresenter createPresenter() {
-        return new FgMonitorPresenter(this);
+    protected FgTrajectoryPresenter createPresenter() {
+        return new FgTrajectoryPresenter(this);
     }
 
     @Override
@@ -58,5 +61,15 @@ public class FgTrajectory extends BaseFragment<FgMonitorPresenter> implements IF
     @Override
     protected void ChildRequestServiceData() {
         refresh_success_gone();
+    }
+
+    @Override
+    public void getData(List<TrajectoryBean> mList) {
+
+    }
+
+    @Override
+    public void error() {
+
     }
 }

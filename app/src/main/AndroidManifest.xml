@@ -108,6 +108,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--关于我们-->
+        <activity
+            android:name=".view.activity.left.AboutMes"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!--修改密码-->
+        <activity
+            android:name=".view.activity.left.ChangePsw"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!--意见反馈-->
+        <activity
+            android:name=".view.activity.left.FeedBack"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!--消息中心-->
+
 
         <!-- Bugly升级SDK配置开始  -->
         <activity

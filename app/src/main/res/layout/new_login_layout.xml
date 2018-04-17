@@ -14,11 +14,9 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_35"
         android:background="@color/white"
         android:gravity="center"
-        android:paddingBottom="@dimen/dp_5"
-        android:paddingTop="@dimen/dp_5"
         android:text="@string/login"
         android:textColor="@color/app_all_tv_black_color"
         android:textSize="@dimen/sp_16" />
@@ -26,7 +24,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_05"
-        android:layout_marginTop="@dimen/dp_5"
         android:background="@color/gray0" />
 
     <ScrollView
@@ -44,10 +41,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dp_25"
-                android:drawablePadding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30"
+                android:drawablePadding="@dimen/dp_7"
                 android:drawableTop="@mipmap/login_logo"
                 android:text="@string/login_logo_str"
+                android:textSize="@dimen/sp_12"
                 android:textColor="@color/login_btn_nopress_color" />
 
             <LinearLayout
@@ -155,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp_25"
                     android:layout_gravity="right"
-                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
                     android:checked="true"
                     android:text="@string/login_rememberpsw"
                     android:textColor="@color/login_account_psw_edit_hint_color"

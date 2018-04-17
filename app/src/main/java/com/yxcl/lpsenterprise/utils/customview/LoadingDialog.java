@@ -37,7 +37,7 @@ public class LoadingDialog extends Dialog {
         mLoadingTv = (TextView) findViewById(R.id.loadingTextView);
     }
 
-    public static LoadingDialog show(Context context, String message) {
+    public static LoadingDialog showLoading(Context context, String message) {
         LoadingDialog sDialog = new LoadingDialog(context, message, R.style.ProgressHUD);
         sDialog.show();
         return sDialog;

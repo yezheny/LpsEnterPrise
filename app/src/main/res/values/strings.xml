@@ -27,5 +27,10 @@
     <string name="main_toolbar_sp_str">视频</string>
     <string name="fg_monitor_search_str">输入车牌号搜索</string>
     <string name="login_logo_str">车辆管理 高效省心</string>
+    <string name="go_score_str">去评分</string>
+    <string name="update_function_str">更新功能</string>
+    <string name="complaint_str">投诉</string>
+    <string name="all_choose_str">全选</string>
+    <string name="single_choose_str">删除</string>
 
 </resources>
